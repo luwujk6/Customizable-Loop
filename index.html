@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customizable Loop</title>
+  </head>
+  <body>
+    <h1>Customizable Loop</h1>
+    <form>
+      Content: <input type="text" id="character"><br><br>
+      Number: <input type="number" id="times"><br><br>
+      <input type="button" value="Create Loop" onclick="createLoop()">
+    </form>
+    <div id="characters">
+    </div>
+
+    <script>
+      function createLoop() {
+        let character = document.getElementById("character").value;
+        let times = document.getElementById("times").value;
+        let charactersDiv = document.getElementById("characters");
+        charactersDiv.innerHTML = "";
+
+        for (let i = 1; i <= times; i++) {
+          charactersDiv.innerHTML += character + "<br>";
+        }
+      }
+    </script>
+  </body>
+</html>
